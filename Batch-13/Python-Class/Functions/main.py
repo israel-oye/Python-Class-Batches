@@ -31,3 +31,10 @@ def describe_pet(animal_type, name):
     print(f"I have a/an {animal_type} named {name}")
 
 describe_pet("dog", "Bullet")
+
+
+def custom_range(start, step=1):
+    pass
+
+for j in custom_range():
+    pass
