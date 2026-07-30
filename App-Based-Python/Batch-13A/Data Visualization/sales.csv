@@ -1,0 +1,21 @@
+Order_ID,Order_Date,Region,Store,Product_Category,Product_Name,Quantity,Unit_Price_USD,Discount_Pct,Sales_USD,Cost_USD,Profit_USD,Payment_Method
+1001,2026-01-03,Northeast,New York,Electronics,Apple AirPods (3rd Gen),2,169.00,10,304.20,220.00,84.20,Credit Card
+1002,2026-01-05,West,San Francisco,Home & Kitchen,Instant Pot Duo 6-Qt,1,99.99,5,94.99,62.00,32.99,Debit Card
+1003,2026-01-07,South,Atlanta,Office Supplies,HP LaserJet Toner Cartridge,3,79.95,15,203.87,132.00,71.87,Corporate Card
+1004,2026-01-09,Midwest,Chicago,Apparel,Levi's 501 Original Jeans,2,59.50,0,119.00,64.00,55.00,Credit Card
+1005,2026-01-10,West,Los Angeles,Beauty,Maybelline Lash Sensational Mascara,5,11.99,20,47.96,18.00,29.96,Mobile Wallet
+1006,2026-01-12,Northeast,Boston,Electronics,Logitech MX Master 3S Mouse,1,99.99,10,89.99,58.00,31.99,Credit Card
+1007,2026-01-14,South,Dallas,Grocery,Starbucks Pike Place Roast Coffee,6,9.99,0,59.94,36.00,23.94,Debit Card
+1008,2026-01-16,West,Seattle,Home & Kitchen,OXO Good Grips Food Storage Set,2,34.99,5,66.48,41.00,25.48,Credit Card
+1009,2026-01-18,Midwest,Detroit,Sports,Wilson NBA Basketball,4,29.99,12,105.56,72.00,33.56,Cash
+1010,2026-01-20,Northeast,Philadelphia,Toys & Games,LEGO Creator 3-in-1 Set,1,49.99,0,49.99,31.00,18.99,Credit Card
+1011,2026-01-22,South,Miami,Electronics,Samsung Galaxy Buds FE,2,99.99,8,183.98,126.00,57.98,Mobile Wallet
+1012,2026-01-24,West,Phoenix,Home & Kitchen,Pyrex Glass Measuring Cup Set,3,14.99,0,44.97,21.00,23.97,Debit Card
+1013,2026-01-25,Midwest,Minneapolis,Apparel,Adidas Crew Socks (6-Pack),4,18.00,15,61.20,28.00,33.20,Credit Card
+1014,2026-01-26,Northeast,Newark,Office Supplies,Staples Copy Paper 8.5x11,10,6.49,10,58.41,34.00,24.41,Corporate Card
+1015,2026-01-27,South,Charlotte,Beauty,CeraVe Hydrating Facial Cleanser,3,16.99,5,48.27,24.00,24.27,Credit Card
+1016,2026-01-28,West,San Diego,Electronics,Anker PowerCore Portable Charger,2,49.99,0,99.98,64.00,35.98,Mobile Wallet
+1017,2026-01-29,Midwest,St. Louis,Grocery,Quaker Oats Old Fashioned,8,4.49,0,35.92,22.00,13.92,Debit Card
+1018,2026-01-30,Northeast,Hartford,Home & Kitchen,KitchenAid Silicone Spatula Set,2,24.99,10,44.98,27.00,17.98,Credit Card
+1019,2026-01-31,South,Nashville,Sports,Under Armour Water Bottle,5,19.99,5,94.95,52.00,42.95,Cash
+1020,2026-02-01,West,Portland,Toys & Games,Barbie Dreamhouse Doll,1,149.99,12,131.99,98.00,33.99,Credit Card
