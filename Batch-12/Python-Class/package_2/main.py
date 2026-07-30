@@ -1,0 +1,1 @@
+description = "Module in package_2"

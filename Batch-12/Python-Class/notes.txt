@@ -1,0 +1,265 @@
+- Python
+- Data 
+- Basic Data types
+- Printing
+- Variables
+    - what
+    - naming
+    - NameError
+    - updating
+- Strings
+    - Character escaping
+    - Concatenation
+    - f-String
+- input
+- TypeError, type checking and type conversion
+    
+- Numbers/Arithmetic Operators
+- math module
+- datetime module
+- f-String expressions
+- other f-string formatlengthlls
+- string methods
+- datetime module
+- Boolean & Comparison operators
+- Boolean string methods: endswith, startswith, isdgit, islower etc.- input function
+- type casting rexplained (implicit vs explicit)
+
+
+
+
+# Fix the code below 👇
+
+print(Notes from Day 1")
+ print("The print statement is used to output strings")
+print("Strings are strings of characters"
+priint("String Concatenation is done with the + sign")
+print(("New lines can be created with a \ and the letter n")
+
+
+
+
+*Examples*
+1. *Grading System*: Write a program that assigns grades based on scores. For example, A (90-100), B (80-89), C (70-79), D (60-69), and F (below 60).
+
+    - Use if-else-if statements to check the score and assign the corresponding grade.
+
+2. *Weather Forecast*: Write a program that suggests activities based on the weather. For example, sunny (go for a walk), rainy (stay indoors), cloudy (go for a run), and snowy (go skiing).
+
+    - Use if-else-if statements to check the weather condition and suggest an activity.
+
+3. *Age Group Classification*: Write a program that classifies people into different age groups. For example, child (0-12), teenager (13-19), adult (20-64), and senior (65 and above).
+
+    - Use if-else-if statements to check the age and classify the person into the corresponding age group.
+
+4. *Login System*: Write a program that checks user credentials and logs them in if the credentials are correct. If the username is incorrect, display an error message. If the password is incorrect, display a different error message.
+
+    - Use if-else-if statements to check the username and password.
+
+5. *Ticket Pricing*: Write a program that calculates ticket prices based on age and student status. For example, children under 12 get a discount, students get a discount, and seniors get a discount.
+
+    - Use if-else-if statements to check the age and student status and calculate the ticket price.
+
+6. *Rock-Paper-Scissors Game*: Write a program that determines the winner of a rock-paper-scissors game. For example, rock beats scissors, scissors beats paper, and paper beats rock.
+
+    - Use if-else-if statements to check the user's choice and the computer's choice and determine the winner.
+
+These examples demonstrate how if-else-if statements can be used to make decisions based on different conditions.
+
+
+---
+
+### 🧠 20 If-Elif Logic Exercises for Beginners
+
+---
+
+1. **Angle Classifier**
+   Ask the user to enter an angle in degrees.
+   Tell them whether it is:
+
+* Acute (< 90°)
+* Right (== 90°)
+* Obtuse (> 90° and < 180°)
+* Straight (== 180°)
+* Reflex (> 180° and < 360°)
+* Full (== 360°)
+
+---
+
+2. **Weather Assistant**
+   Ask the user to input the temperature (in °C). Print a message like:
+
+* “Very Cold” if < 0
+* “Cold” if 0–10
+* “Cool” if 11–20
+* “Warm” if 21–30
+* “Hot” if > 30
+
+---
+
+3. **Grade Generator**
+   User inputs a score (0–100). Print:
+
+* A (>= 90)
+* B (>= 80)
+* C (>= 70)
+* D (>= 60)
+* F (< 60)
+
+---
+
+4. **BMI Category Checker**
+   Input height (m) and weight (kg). Compute BMI and classify:
+
+* Underweight (< 18.5)
+* Normal (18.5–24.9)
+* Overweight (25–29.9)
+* Obese (30+)
+
+---
+
+5. **Traffic Light Helper**
+   Input a color: “red”, “yellow”, or “green”. Print:
+
+* “Stop” for red
+* “Slow down” for yellow
+* “Go” for green
+* Else: “Invalid signal”
+
+---
+
+6. **Time of Day Greeter**
+   Input the current hour (0–23). Respond with:
+
+* “Good morning” (5–11)
+* “Good afternoon” (12–16)
+* “Good evening” (17–20)
+* “Good night” (21–4)
+
+---
+
+7. **Leap Year Checker**
+   Input a year. Tell whether it's a leap year using:
+
+* Divisible by 4 and not 100
+* Or divisible by 400
+
+---
+
+8. **Simple Login System**
+   Ask user for a username and password. Check:
+
+* If both match predefined values, print “Login successful”
+* If only one matches, print which one is wrong
+* If both are wrong, say “Invalid credentials”
+
+---
+
+9. **Age Group Classifier**
+   Input age and print:
+
+* Child (0–12)
+* Teenager (13–19)
+* Young adult (20–35)
+* Adult (36–59)
+* Senior (60+)
+
+---
+
+10. **Even/Odd/Zero Checker**
+    Input a number. Tell if it’s:
+
+* Zero
+* Even
+* Odd
+
+---
+
+11. **Triangle Type Detector**
+    Input three angles. If they sum to 180:
+
+* Print “Equilateral” if all are 60
+* “Isosceles” if two are equal
+* “Scalene” if all are different
+  Else: print “Not a triangle”
+
+---
+
+12. **Planet Identifier**
+    Input a number from 1–8. Print the corresponding planet:
+    1 → Mercury, 2 → Venus, ... 8 → Neptune
+    Else: “Invalid planet number”
+
+---
+
+13. **Number Sign Analyzer**
+    Input a number. Print:
+
+* “Positive” if > 0
+* “Negative” if < 0
+* “Zero” if == 0
+
+---
+
+14. **Water State Checker**
+    Ask user to input a temperature in °C and print:
+
+* “Solid” if ≤ 0
+* “Liquid” if 0–100
+* “Gas” if > 100
+
+---
+
+15. **Rock-Paper-Scissors Judge**
+    Take two inputs (Player A, Player B). Each can be “rock”, “paper”, or “scissors”.
+    Decide the winner or if it’s a tie using if-elif logic.
+
+---
+
+16. **Exam Eligibility Checker**
+    Input: attendance % and assignment score.
+    If attendance < 75, fail.
+    If score < 40, fail.
+    If both okay, print “Eligible”.
+
+---
+
+17. **Simple Currency Converter**
+    Input amount and target currency (`usd`, `eur`, `gbp`).
+    Use static conversion rates to convert from Naira to the target currency and print the result.
+
+---
+
+18. **Password Strength Evaluator**
+    Input a password string.
+    Use `if` conditions to rate it:
+
+* Weak (length < 6)
+* Medium (6–10 and contains letters)
+* Strong (10+ and contains numbers & symbols)
+
+---
+
+19. **Math Operation Chooser**
+    Input: two numbers and a choice:
+
+* 1 for addition
+* 2 for subtraction
+* 3 for multiplication
+* 4 for division
+  Use if-elif to execute the correct operation.
+
+---
+
+20. **Month Days Finder**
+    Ask the user to input a month number (1–12).
+    Print number of days:
+
+* 31 for Jan, Mar, May, etc.
+* 30 for Apr, Jun, Sep, etc.
+* 28/29 for Feb (ask for year to check leap year)
+
+---
+
+
+    

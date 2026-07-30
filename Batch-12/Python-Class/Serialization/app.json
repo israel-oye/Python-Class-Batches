@@ -1,0 +1,38 @@
+{
+    "app_name": "ExpenseTracker",
+    "version": 1.2,
+    "user_id": 12847,
+    "is_premium": true,
+    "created_at": "2025-08-15T10:30:00Z",
+    "primary_color": "#49e4a3",
+    "color_palette": {
+        "primary": "#49e4a3",
+        "secondary": "#2d9d7a",
+        "accent": "#1a5c4a",
+        "background": "#f5f5f5",
+        "text": "#333333"
+    },
+    "monthly_budget": 2500.50,
+    "categories": [
+        "Food",
+        "Transport",
+        "Entertainment",
+        "Utilities"
+    ],
+    "recent_transactions": [
+        {
+            "id": "txn_001",
+            "amount": 45.99,
+            "category": "Food",
+            "date": "2026-03-25"
+        },
+        {
+            "id": "txn_002",
+            "amount": 120.00,
+            "category": "Transport",
+            "date": "2026-03-24"
+        }
+    ],
+    "notifications_enabled": true,
+    "currency": "USD"
+}

@@ -1,0 +1,22 @@
+- match-case
+# - maximum/minimum
+# - random
+# - pattern printing ✅
+# - nested for loop ✅
+- Conditionals
+- Lists, range
+- Loops (For & While)
+- Dict, Set, Tuples
+- Functions ✅
+- HOF ✅
+- decorators ✅
+- generators ✅
+- modules & packages ✅
+- Exception Handling ✅
+- OOP 
+- File Handling
+- Serialization & Deserialization
+- Requests (HTTP)
+- Database Connection
+- Tkinter
+*Command prompt

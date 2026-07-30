@@ -1,0 +1,10 @@
+{
+    "name": "Hammed Ilesanmi",
+    "age": 35,
+    "friends": [
+        "Emmanuel Balogun",
+        "Israel Kola"
+    ],
+    "is_admin": false,
+    "best_friend": null
+}
