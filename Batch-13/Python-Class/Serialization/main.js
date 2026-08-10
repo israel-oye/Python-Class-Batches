@@ -20,3 +20,7 @@ console.log(obj['classname']);
 
 // let obj = JSON.parse(jsonStr);
 // console.log(obj);
+
+let names = ["Ade", "Bolu", "Charles"];
+
+console.log(JSON.stringify(names));

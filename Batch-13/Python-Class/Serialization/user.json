@@ -1,0 +1,17 @@
+{
+    "name": "John Doe",
+    "email": "john@example.com",
+    "age": 30,
+    "city": "New York",
+    "isActive": true,
+    "skills": [
+        "JavaScript",
+        "Python",
+        "React"
+    ],
+    "employment": {
+        "company": "Tech Corp",
+        "position": "Software Engineer",
+        "yearsExperience": 5
+    }
+}
