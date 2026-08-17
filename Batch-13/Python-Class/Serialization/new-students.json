@@ -1,0 +1,83 @@
+[
+    {
+        "Student_id": 101,
+        "Name": "Oliver",
+        "Gender": "Male",
+        "Hobbies": "Dancing",
+        "C++ Marks": 67,
+        "Java Marks": 86,
+        "Python Marks": 98
+    },
+    {
+        "Student_id": 103,
+        "Name": "Rita",
+        "Gender": "Female",
+        "Hobbies": "Singing",
+        "C++ Marks": 50,
+        "Java Marks": 83,
+        "Python Marks": 76
+    },
+    {
+        "Student_id": 105,
+        "Name": "Smith",
+        "Gender": "Male",
+        "Hobbies": "Gardening",
+        "C++ Marks": 98,
+        "Java Marks": 72,
+        "Python Marks": 84
+    },
+    {
+        "Student_id": 102,
+        "Name": "Michael",
+        "Gender": "Male",
+        "Hobbies": "Cooking",
+        "C++ Marks": 87,
+        "Java Marks": 50,
+        "Python Marks": 75
+    },
+    {
+        "Student_id": 104,
+        "Name": "Richard",
+        "Gender": "Male",
+        "Hobbies": "Dancing",
+        "C++ Marks": 83,
+        "Java Marks": 69,
+        "Python Marks": 90
+    },
+    {
+        "Student_id": 104,
+        "Name": "Richard",
+        "Gender": "Male",
+        "Hobbies": "Dancing",
+        "C++ Marks": 83,
+        "Java Marks": 69,
+        "Python Marks": 90
+    },
+    {
+        "Student_id": 106,
+        "Name": "Linda",
+        "Gender": "Female",
+        "Hobbies": "Singing",
+        "C++ Marks": 75,
+        "Java Marks": 88,
+        "Python Marks": 87
+    },
+    {
+        "Student_id": 107,
+        "Name": "Emy",
+        "Gender": "Female",
+        "Hobbies": "Photography",
+        "C++ Marks": 83,
+        "Java Marks": 91,
+        "Python Marks": 89
+    },
+    {
+        "Student_id": 111,
+        "Name": "David",
+        "Gender": "Male",
+        "Hobbies": "Cooking",
+        "C++ Marks": 80,
+        "Java Marks": 74,
+        "Python Marks": 81
+    }
+]
