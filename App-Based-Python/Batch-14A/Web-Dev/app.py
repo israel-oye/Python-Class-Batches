@@ -1,4 +1,4 @@
-from flask import Flask, url_for
+from flask import Flask, redirect, render_template, request, url_for
 
 app = Flask(__name__)
 
@@ -11,63 +11,82 @@ products = [
 ]
 
 
-
 @app.route("/")
 def home():
-    return "<h2>Testing testing...</h2>"
+    
+    # print(render_template("index.html"))
+    word = "<h3>Header </h3>"
+    # return redirect(url_for('products_route'))
+    return render_template("index.html", text=word)
 
 
-@app.route("/example")
-def example(): # A view function
-    return "This is exmple site"
+@app.route("/example/<word>")
+def example(word): # A view function
+    return render_template('index.html', wrd=word)
 
 
+# @app.route("/products")
+# def products_route():
+#     all_products = [
+#         f"""
+#         <a href={url_for('product_detail', id_=p['id'])}>
+#         <li>
+#             {p['name']}
+#         </li>
+#         </a>
+#         """
+#         for p in products
+#     ]
+
+#     all_products_html = ""
+#     for li in all_products:
+#         all_products_html += li
+
+#     print(all_products_html)
+
+#     return f"""
+#     <h3>Products</h3>
+#     <ol>
+#     {all_products_html}
+#     </ol>
+#     """
 @app.route("/products")
 def products_route():
-    all_products = [
-        f"""
-        <a href={url_for('product_detail', id_=p['id'])}>
-        <li>
-            {p['name']}
-        </li>
-        </a>
-        """
-        for p in products
-    ]
-
-    all_products_html = ""
-    for li in all_products:
-        all_products_html += li
-
-    
-
-    print(all_products_html)
-
-    return f"""
-    <h3>Products</h3>
-    <ol>
-    {all_products_html}
-    </ol>
-    """
-
+    return render_template("products.html", products=products)
 
 @app.route('/products/<int:id_>')
 def product_detail(id_: int):
     try:
         product = products[id_ - 1]
+        color_hex = hex(product['color'])
+        color_hex = color_hex[2:]
     except IndexError as e:
         return "<p>Error 404</p>"
 
     print(url_for('product_detail', id_=20))
     return f"""
         <h2>Products Page</h2>
-        <h3>{product['name']}</h3>
+        <h3 style="color: #{color_hex}">{product['name']}</h3>
         <br>
         <p>₦{product['price']}</p>
         <a href="{url_for('products_route')}"> All products </a>
     """
 
+@app.route('/products', methods=['POST'])
+def create_product():
+    import random
 
+    new_item = request.form['item']
+
+    p = {
+        'id': len(products) + 1,
+        'name': new_item,
+        'price': round((random.random() * 1000) + 100, 2),
+        'color': 0
+    }
+    products.append(p)
+
+    return redirect(url_for('products_route'))
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)

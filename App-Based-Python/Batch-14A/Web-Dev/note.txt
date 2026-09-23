@@ -1,0 +1,18 @@
+To create a virtual environment. In  the terminal
+python -m venv <nameOfEnv>
+
+Windows
+<nameOfEnv>/Scripts/activate
+
+Bash/Linux
+source <nameOfEnv>/bin/activate
+
+
+pip install <lib> Flask
+
+HTTP Methods
+- GET
+- POST
+- PUT
+- PATCH
+- DELETE
