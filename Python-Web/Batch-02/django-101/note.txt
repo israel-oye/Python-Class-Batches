@@ -1,0 +1,21 @@
+To create a Virtual environment
+
+$ python -m venv <nameOfEnv>
+
+
+To activate a virtual environment
+
+$ <nameOfEnv>/Scripts/activate
+
+
+To install a library
+$ pip install <lib>
+
+
+To create a list of all installed libraries
+$ pip freeze > requirements.txt
+
+
+Getting Started With Django
+1. django-admin startproject <project_name> .
+2. python manage.py startapp <app_name>
