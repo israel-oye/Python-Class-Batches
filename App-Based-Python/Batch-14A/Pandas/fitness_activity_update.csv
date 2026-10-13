@@ -1,51 +1,51 @@
-BMI,Weekly_Workout_Hours
-22.77,2.25
-25.56,4.0
-22.03,1.33
-26.57,6.25
-23.53,2.5
-25.8,3.67
-22.48,2.25
-25.93,1.17
-21.64,3.33
-24.54,3.0
-22.68,5.83
-27.47,2.25
-22.27,3.67
-23.66,1.33
-23.67,2.5
-25.9,6.67
-22.58,1.17
-27.76,4.33
-21.91,2.25
-24.9,3.67
-22.06,3.0
-26.25,6.25
-22.68,1.33
-24.44,2.5
-22.15,4.33
-26.58,2.25
-24.62,1.17
-25.25,4.0
-23.59,5.83
-26.87,1.33
-22.38,2.5
-24.86,3.67
-21.5,2.25
-26.23,6.67
-24.45,1.33
-28.02,2.5
-23.66,4.0
-24.39,2.25
-24.61,6.25
-25.59,1.17
-22.04,3.67
-26.3,3.25
-21.23,2.25
-25.22,5.83
-23.46,1.33
-26.56,4.0
-21.45,2.5
-24.49,3.67
-22.95,6.25
-27.77,2.25
+Student_ID,Student_Name,Age,Gender,Height_cm,Weight_kg,Workouts_Per_Week,Avg_Workout_Minutes,Avg_Daily_Steps_Thousands,Resting_Heart_Rate,Preferred_Activity,Height_m,BMI,Weekly_Workout_Minutes,Weekly_Workout_Hours
+ST001,Amaka Okafor,21,Female,165,62,3,45,7.2,38,Running,1.65,22.77,135,2.25
+ST002,Daniel Musa,24,Male,178,81,4,60,8.5,42,Cycling,1.78,25.56,240,4.0
+ST003,Grace Bello,20,Female,158,55,2,40,6.1,35,Yoga,1.58,22.03,80,1.33
+ST004,Ibrahim Yusuf,26,Male,182,88,5,75,9.4,50,Running,1.82,26.57,375,6.25
+ST005,Chidinma Eze,22,Female,170,68,3,50,7.8,40,Swimming,1.7,23.53,150,2.5
+ST006,Tunde Adeyemi,28,Male,175,79,4,55,8.1,44,Gym,1.75,25.8,220,3.67
+ST007,Aisha Ibrahim,23,Female,162,59,3,45,7.0,36,Cycling,1.62,22.48,135,2.25
+ST008,Emeka Nwosu,25,Male,180,84,2,35,6.5,39,Basketball,1.8,25.93,70,1.17
+ST009,Zainab Umar,19,Female,155,52,4,50,7.5,33,Running,1.55,21.64,200,3.33
+ST010,Michael Johnson,27,Male,176,76,3,60,8.8,45,Football,1.76,24.54,180,3.0
+ST011,Blessing Peter,21,Female,168,64,5,70,9.0,48,Swimming,1.68,22.68,350,5.83
+ST012,Samuel Okoro,30,Male,183,92,3,45,7.3,51,Gym,1.83,27.47,135,2.25
+ST013,Fatima Abdullahi,24,Female,160,57,4,55,8.0,37,Running,1.6,22.27,220,3.67
+ST014,David Chukwu,22,Male,172,70,2,40,6.8,41,Cycling,1.72,23.66,80,1.33
+ST015,Esther Danjuma,26,Female,167,66,3,50,7.6,43,Yoga,1.67,23.67,150,2.5
+ST016,Yemi Afolabi,29,Male,179,83,5,80,9.2,49,Football,1.79,25.9,400,6.67
+ST017,Joy Udo,20,Female,163,60,2,35,5.9,34,Gym,1.63,22.58,70,1.17
+ST018,Victor Osei,31,Male,185,95,4,65,8.7,52,Swimming,1.85,27.76,260,4.33
+ST019,Maryam Sani,23,Female,157,54,3,45,7.1,38,Running,1.57,21.91,135,2.25
+ST020,Kelvin Mensah,25,Male,177,78,4,55,8.3,46,Basketball,1.77,24.9,220,3.67
+ST021,Adaeze Obi,22,Female,169,63,3,60,8.9,41,Cycling,1.69,22.06,180,3.0
+ST022,Usman Garba,27,Male,181,86,5,75,9.5,54,Football,1.81,26.25,375,6.25
+ST023,Ruth James,24,Female,164,61,2,40,6.4,36,Yoga,1.64,22.68,80,1.33
+ST024,Henry Williams,29,Male,174,74,3,50,7.7,43,Running,1.74,24.44,150,2.5
+ST025,Hauwa Mohammed,21,Female,159,56,4,65,8.6,39,Swimming,1.59,22.15,260,4.33
+ST026,Chinedu Ani,26,Male,184,90,3,45,7.0,47,Gym,1.84,26.58,135,2.25
+ST027,Sarah Thomas,30,Female,171,72,2,35,6.2,40,Cycling,1.71,24.62,70,1.17
+ST028,Babatunde Lawal,23,Male,178,80,4,60,8.4,45,Football,1.78,25.25,240,4.0
+ST029,Ngozi Ibe,25,Female,166,65,5,70,9.1,50,Running,1.66,23.59,350,5.83
+ST030,Ahmed Bello,32,Male,182,89,2,40,6.6,53,Basketball,1.82,26.87,80,1.33
+ST031,Patience Okeke,20,Female,161,58,3,50,7.9,35,Yoga,1.61,22.38,150,2.5
+ST032,Franklin Cole,28,Male,176,77,4,55,8.0,44,Swimming,1.76,24.86,220,3.67
+ST033,Halima Ali,22,Female,154,51,3,45,7.3,37,Running,1.54,21.5,135,2.25
+ST034,Kingsley Obi,24,Male,180,85,5,80,9.6,48,Football,1.8,26.23,400,6.67
+ST035,Deborah Mark,27,Female,168,69,2,40,6.0,42,Gym,1.68,24.45,80,1.33
+ST036,Musa Ibrahim,33,Male,187,98,3,50,7.5,55,Cycling,1.87,28.02,150,2.5
+ST037,Nneka Eze,23,Female,172,70,4,60,8.8,46,Swimming,1.72,23.66,240,4.0
+ST038,Joseph Ade,26,Male,173,73,3,45,7.2,43,Running,1.73,24.39,135,2.25
+ST039,Amina Shehu,29,Female,160,63,5,75,9.3,49,Football,1.6,24.61,375,6.25
+ST040,Chris Adams,21,Male,179,82,2,35,6.7,38,Basketball,1.79,25.59,70,1.17
+ST041,Ifeoma Nnamani,24,Female,165,60,4,55,8.2,40,Cycling,1.65,22.04,220,3.67
+ST042,Abdul Kareem,30,Male,186,91,3,65,8.9,52,Swimming,1.86,26.3,195,3.25
+ST043,Linda George,22,Female,158,53,3,45,7.0,34,Yoga,1.58,21.23,135,2.25
+ST044,Taiwo Ajayi,27,Male,177,79,5,70,9.4,47,Football,1.77,25.22,350,5.83
+ST045,Sade Balogun,25,Female,169,67,2,40,6.5,39,Running,1.69,23.46,80,1.33
+ST046,Patrick Obi,31,Male,181,87,4,60,8.6,51,Gym,1.81,26.56,240,4.0
+ST047,Kemi Adebayo,20,Female,163,57,3,50,7.8,36,Swimming,1.63,21.45,150,2.5
+ST048,Mustapha Sule,28,Male,175,75,4,55,8.1,44,Cycling,1.75,24.49,220,3.67
+ST049,Janet Wilson,26,Female,167,64,5,75,9.0,48,Running,1.67,22.95,375,6.25
+ST050,Oluwaseun Fatai,29,Male,183,93,3,45,7.4,50,Basketball,1.83,27.77,135,2.25
