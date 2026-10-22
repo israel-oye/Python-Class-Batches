@@ -1,7 +1,7 @@
 Gender,Courses,Hours_attended,Hours_prepared,Success_exam
 Male,Science,20,7,Y
 Male,Commerce,4,4,No
-Female,Science,2800,14,Yes
+Female,Science,28,14,Yes
 Male,Arts,18,8,Yes
 Male,Commerce,12,,N
 Female,Science,24,12,
