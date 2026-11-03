@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-control{
+            border-radius: 8px;
+        }
+
+        .form-group{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-starts;
+        }
+
+        .error-msg span{
+            font-size: .8rem;
+            color: rgb(236, 80, 80);
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form action="{% url 'create_book' %}" method="post">
+        {% csrf_token %}
+        
+        {% for field in form %}
+            <div class="form-group">
+                {{ field.label_tag }}
+
+                {{ field }}
+
+                <div class="error-msg">
+                    {% for error in field.errors %}
+                        <span>{{error}}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

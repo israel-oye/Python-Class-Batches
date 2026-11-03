@@ -19,3 +19,4 @@ $ pip freeze > requirements.txt
 Getting Started With Django
 1. django-admin startproject <project_name> .
 2. python manage.py startapp <app_name>
+python manage.py runserver

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,7 +58,7 @@
         Products
     </h1>
 
-    
+    <img src="{% static 'book-2.jpg' %}" alt="Book 1 image" width="50%">    
 
     <div class="container">
         {% for p in products %}
