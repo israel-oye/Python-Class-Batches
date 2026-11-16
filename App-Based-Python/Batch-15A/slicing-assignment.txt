@@ -1,0 +1,45 @@
+*Create a Palindrome*
+Given: `values = [5, 10, 15, 20, 25]`
+Task: Use slicing to create a new list that is a palindrome by combining the original list with its reverse (excluding the last element to avoid duplication in the middle). Result: `[5, 10, 15, 20, 25, 20, 15, 10, 5]`
+
+*Complex Step Slicing*
+Given: `sequence = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]`
+Task: Extract elements starting from the second-to-last element, going backwards, taking every 3rd element. Result should be `[14, 11, 8, 5, 2]`
+
+*Reverse the Middle Portion*
+
+Given: `letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']`
+
+Task: Use slicing to reverse only elements from index 2 to 5 (inclusive of 2, exclusive of 5), then combine it back. 
+Result should be `['a', 'b', 'e', 'd', 'c', 'f', 'g', 'h']`
+
+Assignment
+
+Exercise 1: # Below is a record of attendances on two days.
+mon = {"John", "Mary", "Steve"}
+tues = {"Mary", "Steve", "Sam"}
+
+# Write a program to print
+# 1. Students who attended both days
+# 2. Students who attended only one day .
+# 3. Total unique students for both days .
+------------------------------------------------------------------------------------------------------------------------------
+
+
+# *Exercise 2: Finding Students Enrolled in Multiple Courses*
+
+ Identify students who are enrolled in more than one course (attending multiple classes).
+
+```
+math_class = ["Amara", "Chidi", "Folake", "Emeka", "Ngozi"]
+english_class = ["Chidi", "Tunde", "Folake", "Yemi", "Blessing"]
+science_class = ["Emeka", "Folake", "Chidi", "Chiamaka", "Ayo"]
+
+```
+
+**Assignment for Students:**
+- Add more classes and test
+- Find students enrolled in ALL three courses
+- Find students enrolled in ONLY one course
+
+---
