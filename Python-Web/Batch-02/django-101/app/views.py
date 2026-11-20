@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.http import HttpRequest, HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
@@ -13,12 +14,20 @@ all_products = [
 ]
 
 # Create your views here.
+@login_required(login_url='/auth/login')
 def index(request):
-    return HttpResponse("<h1>hello world</h1>")
+    return HttpResponse(f"<h1>hello {request.user.first_name}</h1>")
 
 
 def products(request):
-    return render(request, 'products.html', {'products': all_products})
+    return render(
+        request, 
+        'products.html', 
+        {
+            'products': all_products,
+            'user': request.user
+        }
+        )
 
 
 def product_detail(request, id):

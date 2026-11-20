@@ -1,3 +1,4 @@
+import uuid
 from decimal import Decimal
 
 from django.db import models
@@ -19,4 +20,29 @@ class Product(models.Model):
         max_length=5
     )
 
+    order_id = models.ForeignKey(
+        'Order',
+        on_delete=models.SET_NULL, 
+        null=True,
+        related_name='products'
+    )
 
+    class Meta:
+        ordering = ['-name',]
+        indexes =[ 
+            models.Index(fields=['id', 'name']),
+        ]
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'price': self.price,
+            'category': self.category
+        }
+
+
+class Order(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
-    'e_commerce'
+    'e_commerce',
+    'account',
 ]
 
 MIDDLEWARE = [
@@ -108,7 +109,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'account.CustomUser'
 
+AUTHENTICATION_BACKENDS = [
+    'account.backends.EmailBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
 # Internationalization
 # https://docs.djangoproject.com/en/6.1/topics/i18n/
 

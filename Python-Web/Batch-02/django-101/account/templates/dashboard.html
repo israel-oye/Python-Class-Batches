@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | {{ user.get_full_name|default:user.username }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex h-screen overflow-hidden">
+
+    <!-- Sidebar Navigation -->
+    <aside class="w-64 bg-slate-900 text-white flex flex-col">
+        <div class="h-16 flex items-center px-6 border-b border-slate-800">
+            <span class="text-xl font-bold tracking-tight">AppLogo</span>
+        </div>
+
+        <nav class="flex-1 px-4 py-6 space-y-2">
+            <a href="#" class="block px-4 py-2.5 bg-indigo-600 rounded-lg font-medium text-white transition-colors">
+                Dashboard Overview
+            </a>
+            <a href="#"
+                class="block px-4 py-2.5 rounded-lg font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">
+                Edit Profile
+            </a>
+            <a href="#"
+                class="block px-4 py-2.5 rounded-lg font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">
+                Security &amp; Password
+            </a>
+        </nav>
+
+        <!-- Sidebar User Footer -->
+        <div class="p-4 border-t border-slate-800">
+            <div class="flex items-center space-x-3">
+                <!-- Extracts first letter of first_name, falling back to username -->
+                <div
+                    class="w-9 h-9 rounded-full bg-indigo-500 flex items-center justify-center text-sm font-bold uppercase shrink-0">
+                    {{ user.first_name|default:user.username|slice:":1" }}
+                </div>
+                <div class="text-sm overflow-hidden">
+                    <p class="font-medium truncate">{{ user.get_full_name|default:user.username }}</p>
+                    <p class="text-slate-400 text-xs truncate">@{{ user.username }}</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 flex flex-col h-screen overflow-y-auto">
+        <!-- Top Header -->
+        <header class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-8 shrink-0">
+            <div class="flex items-center space-x-3">
+                <h1 class="text-2xl font-semibold text-gray-900">
+                    Welcome back, {{ user.first_name|default:user.username }}!
+                </h1>
+                {% if user.is_staff %}
+                <span
+                    class="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200">
+                    Staff
+                </span>
+                {% endif %}
+            </div>
+
+            <!-- Django requires POST + CSRF token for LogoutView -->
+            <form action="{% url 'logout' %}" method="POST" class="inline">
+                {% csrf_token %}
+                <button type="submit" class="text-sm font-medium text-red-600 hover:text-red-800 cursor-pointer">
+                    Log Out
+                </button>
+            </form>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="p-8 max-w-7xl mx-auto w-full space-y-6">
+
+            <!-- Django Messages Framework Alert Banner -->
+            {% if messages %}
+            <div class="space-y-2">
+                {% for message in messages %}
+                <div class="p-4 rounded-lg border text-sm font-medium
+                            {% if message.tags == 'error' %}bg-red-50 text-red-800 border-red-200
+                            {% elif message.tags == 'success' %}bg-emerald-50 text-emerald-800 border-emerald-200
+                            {% else %}bg-blue-50 text-blue-800 border-blue-200{% endif %}">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Profile & Contact Card -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <div class="flex items-center justify-between border-b border-gray-100 pb-3 mb-4">
+                        <h2 class="text-lg font-semibold text-gray-900">Profile &amp; Contact</h2>
+                        {% if user.is_active %}
+                        <span
+                            class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700">
+                            Active
+                        </span>
+                        {% endif %}
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <span class="block text-xs font-medium text-gray-500 uppercase tracking-wide">Full
+                                    Name</span>
+                                <p class="mt-1 text-gray-900 font-medium">
+                                    {{ user.get_full_name|default:"—" }}
+                                </p>
+                            </div>
+                            <div>
+                                <span
+                                    class="block text-xs font-medium text-gray-500 uppercase tracking-wide">Username</span>
+                                <p class="mt-1 text-gray-900 font-mono text-sm">@{{ user.username }}</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="block text-xs font-medium text-gray-500 uppercase tracking-wide">Email
+                                Address</span>
+                            <p class="mt-1 text-gray-900">{{ user.email }}</p>
+                        </div>
+
+                        <div>
+                            <span class="block text-xs font-medium text-gray-500 uppercase tracking-wide">Phone
+                                Number</span>
+                            {% if user.phone_number %}
+                            <p class="mt-1 text-gray-900">{{ user.phone_number }}</p>
+                            {% else %}
+                            <p class="mt-1 text-sm text-gray-400 italic">No phone number added</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account Activity Card -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h2 class="text-lg font-semibold text-gray-900 border-b border-gray-100 pb-3 mb-4">
+                        Account Activity
+                    </h2>
+
+                    <div class="space-y-4">
+                        <div>
+                            <span class="block text-xs font-medium text-gray-500 uppercase tracking-wide">Date
+                                Joined</span>
+                            <p class="mt-1 text-gray-900">{{ user.date_joined|date:"F j, Y" }}</p>
+                        </div>
+
+                        <div>
+                            <span class="block text-xs font-medium text-gray-500 uppercase tracking-wide">Last
+                                Login</span>
+                            <p class="mt-1 text-gray-900">
+                                {% if user.last_login %}
+                                {{ user.last_login|date:"M j, Y · g:i A" }}
+                                {% else %}
+                                First active session
+                                {% endif %}
+                            </p>
+                        </div>
+
+                        <div class="pt-2">
+                            <span class="block text-xs font-medium text-gray-500 uppercase tracking-wide">Account
+                                Role</span>
+                            <p class="mt-1 text-sm text-gray-700">
+                                {% if user.is_superuser %}
+                                Superuser Administrator
+                                {% elif user.is_staff %}
+                                Staff Member
+                                {% else %}
+                                Standard Member
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
