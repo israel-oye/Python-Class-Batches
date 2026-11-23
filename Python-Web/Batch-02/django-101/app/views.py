@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.core.mail import EmailMessage, send_mail
 from django.http import HttpRequest, HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
@@ -98,3 +99,18 @@ def create_book(request: HttpRequest):
     _context['form'] = form
 
     return render(request, 'new_book.html', _context)
+
+
+def test_email(req):
+    # send_mail(
+    #     subject='Dj Email Test',
+    #     message="Testing testing",
+    #     recipient_list=["walon59287@bcough.com",]
+    # )
+    msg = EmailMessage(
+            subject='Dj Email Test',
+            body="Testing testing",
+            to=["walon59287@bcough.com",]
+    )
+    msg.send()
+    return HttpResponse("Sent email")
