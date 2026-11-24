@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if current_user.is_authenticated %}
+      <a href="{{url_for('auth.dashboard')}}">
+        <h3>Dashboard</h3>
+    </a> 
+    {% else %}
+    Login/Register to use the app.
+        <a href="{{url_for('auth.login')}}">
+            <h3>Login</h3>
+        </a>
+        <br>
+        <a href="{{url_for('auth.register')}}">
+            <h3>Register</h3>
+        </a>
+    {% endif %}
+    
+</body>
+</html>

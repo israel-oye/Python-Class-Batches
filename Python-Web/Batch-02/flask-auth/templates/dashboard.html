@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Overview</title>
+    <!-- Using Tailwind CSS for utility-first styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex h-screen overflow-hidden">
+
+    <!-- Sidebar Navigation -->
+    <aside class="w-64 bg-slate-900 text-white flex flex-col">
+        <div class="h-16 flex items-center px-6 border-b border-slate-800">
+            <span class="text-xl font-bold tracking-tight">AppLogo</span>
+        </div>
+        <nav class="flex-1 px-4 py-6 space-y-2">
+            <a href="#" class="block px-4 py-2.5 bg-indigo-600 rounded-lg font-medium text-white transition-colors">
+                Dashboard Overview
+            </a>
+            <a href="#"
+                class="block px-4 py-2.5 rounded-lg font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">
+                Profile Settings
+            </a>
+            <a href="{{url_for('pages.index')}}"
+                class="block px-4 py-2.5 rounded-lg font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">
+                Go Home
+            </a>
+        </nav>
+        <div class="p-4 border-t border-slate-800">
+            <div class="flex items-center space-x-3">
+                <div
+                    class="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center text-sm font-bold uppercase">
+                    {{ current_user.first_name[0] }}
+                </div>
+                <div class="text-sm overflow-hidden">
+                    <p class="font-medium truncate">{{ current_user.first_name }}</p>
+                    <p class="text-slate-400 text-xs truncate">{{ current_user.email }}</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 flex flex-col h-screen overflow-y-auto">
+        <!-- Top Header -->
+        <header class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-8 z-10">
+            <h1 class="text-2xl font-semibold text-gray-900">
+                Welcome back, {{ current_user.first_name }}!
+            </h1>
+            
+            <form action="{{url_for('auth.logout')}}" method="post">
+                <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+                <input class="text-sm font-medium text-red-600 hover:text-red-800" type="submit" value="Log out">
+            </form>
+        </header>
+
+        <!-- Dashboard Widgets -->
+        <div class="p-8 max-w-7xl mx-auto w-full space-y-6">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Profile Card -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h2 class="text-lg font-semibold border-b border-gray-100 pb-3 mb-4">Profile Information</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-medium text-gray-500 uppercase tracking-wide">Full
+                                Name</label>
+                            <p class="mt-1 text-gray-900 font-medium">
+                                {{ current_user.first_name }}
+                                {% if current_user.last_name %}
+                                {{ current_user.last_name }}
+                                {% endif %}
+                            </p>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-gray-500 uppercase tracking-wide">Email
+                                Address</label>
+                            <p class="mt-1 text-gray-900">{{ current_user.email }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account Metadata Card -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h2 class="text-lg font-semibold border-b border-gray-100 pb-3 mb-4">Account Details</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-medium text-gray-500 uppercase tracking-wide">Account ID
+                                (UUID)</label>
+                            <p
+                                class="mt-1 text-sm font-mono text-gray-600 bg-gray-50 p-2 rounded border border-gray-100 break-all">
+                                {{ current_user.uuid }}
+                            </p>
+                        </div>
+                        <div class="flex justify-between">
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 uppercase tracking-wide">Member
+                                    Since</label>
+                                <!-- Assuming datetime formatting via Jinja filter -->
+                                <p class="mt-1 text-gray-900">{{ current_user.created_at.strftime('%B %d, %Y') }}</p>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 uppercase tracking-wide">Last
+                                    Updated</label>
+                                <p class="mt-1 text-gray-900">{{ current_user.updated_at.strftime('%b %d, %Y') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
